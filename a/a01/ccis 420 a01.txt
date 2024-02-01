@@ -1,0 +1,66 @@
+Carl Dalebout
+ciss420_a01
+
+1.
+  a) 
+    
+  b) 
+
+2.
+  010FA210FB = 0000 0001 0000 1111 1010 | 0010 0001 0000 1111 1011 = LOAD 0FA | STOR 0FB
+  010FA0F08D = 0000 0001 0000 1111 1010 | 0000 1111 0000 1000 1101 = LOAD FA0 | JUMP 08D
+  020FA210FB = 0000 0010 0000 1111 1010 | 0010 0001 0000 1111 1011 = LOAD 0FA | STOR 0FB
+
+3.
+  The pace slowed to a doubling every 18 months in the 1970s, but has sustained that rate ever since.
+
+4.
+  MBR: contains a word to be stored in memory or sent to the I/O unit. It is also used to receive a word from the memory or from the I/O unit
+  
+  MAR: contains that address in memory of the word to be written from or read into the MBR
+  
+  ADDRESS BUS: contains the same address stored in the MAR for the memory subsystem when writing to memory
+
+  DATA BUS: contains the data stored in the MBR for writing to memory
+
+  CONTROL BUS: contains the CPU signals to preform a opeation on the memory
+
+5.
+  a)	
+	  r       m       z
+       -------+-------+-------
+    e)   1.00 |  0.59 |  0.32
+    f)   1.00 |  0.88 |  0.88
+    h)   1.00 |  2.32 |  2.05
+    i)   1.00 |  0.90 |  1.67
+    k)   1.00 |  0.48 |  0.48
+  
+  b)	
+	  r       m       z
+       -------+-------+-------
+    e)   1.71 |  1.00 |  0.55
+    f)   1.19 |  1.00 |  1.00
+    h)   0.43 |  1.00 |  0.88
+    i)   1.11 |  1.00 |  1.86
+    k)   2.10 |  1.00 |  1.002
+ 
+  c)
+    from these processor r is the slower of the 3
+
+  d)
+    r = 0.41 m = 0.11 z = 0.10
+
+6.
+   a)
+	   a       b       c       d
+	-------+-------+-------+-------
+	  1.00 |  0.75 |  1.13 |  0.44 
+   
+   b) 
+	d is the fastest of the 4 followed by b then a then c with be most speed up being found between c and d
+
+7.
+	   a       b       c       d
+	-------+-------+-------+-------
+	  2.29 |  1.71 |  2.57 |  1.00
+   	the ranking does not change with d still being the fastest of the 4 followed by b then a then c with the biggist diffecence being between c and d
