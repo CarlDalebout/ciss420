@@ -1,0 +1,41 @@
+4.2)
+    a)
+        they are filling an array z with the difference between array x and array y at the same index 
+        then Squaring all the elements in the z array 
+    b)
+        Program A will be better because since z[i] is already being called within the scope 
+        and so is only needing to compute the address one compared to Program B where z[i] is getting computed twice.
+
+4.3)
+    a)
+        with reference to the first for loop each time that it iterates the system will need to compute the address of a[i]
+    b)
+        the example of temporal locality would be in reference within the second loop where it is both reading and writing on a[i] and so as the loop iterates it will hold onto a[i].
+
+4.5)
+        1 + 0.05T > 1.5 +0.03T
+        0.05T - 0.03T > 1.5 - 1
+        t(0.05 - 0.03) > 0.5
+        0.02T > 0.5
+        T > 0.5/0.02
+        T > 25 
+
+4.6)
+    a)
+
+    b)
+
+
+5.3)
+
+
+5.9)
+    a)
+
+    b)
+
+    c)
+
+    d)
+
+    e)
