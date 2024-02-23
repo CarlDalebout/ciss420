@@ -27,15 +27,38 @@
 
 
 5.3)
+    MM = 2^6+20    AP = 26
+    Block_size = 2^4 bytes
+    number of Blocks = 2^3+10/2^4 = 2^9
+    number of sets in the cache = 2^9/2 = 2^8 bits for the set = 8
 
+    tag = 26 - (8+4) = 14 bits
+    set = 8 bits
+    shift = 4 bits
+    |  00 0000 0000 0000|0000 0000|0000|
 
 5.9)
+    MM = 2^16 AP = 16
+    cache size = 2^10
+    Block_size = 2^3+2  5 bits
+    number of lines = 2^5
+    number of sets = 2^5/1 = 2^5
+
     a)
-
+        Tag = 9
+        Index = 5
+        Offset = 5
+        |9|5|5|
     b)
-
+        line  8
+        line 25
+        line  0
+        line 21
     c)
-
+        tag = 0 0000 0110
+        index = 1 0000
+        shift = 1 1010
     d)
-
+        1KB
     e)
+        because the tag is also used to determin a cache hit and a chache miss
