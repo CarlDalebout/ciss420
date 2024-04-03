@@ -1,0 +1,68 @@
+Carl Dalebout
+Assignment 5
+Ciss 420
+
+7.1) 
+    ts = Seek Time meaning the ammount of tiem it takes for the movable-head system to move at the track.
+    r  = The Rotation Speed of the disk, in revolutions per second allowing the movable head to be over the desired block/segment.
+    b/rN = The rate at which the movable head is able to access all of the bits on the track
+
+7.3) 
+    ts = seek time; average time to position head over track  
+    r = rotation speed of the disk, in revolutions per second  
+    n = number of bits per sector  
+    N = capacity of a track, in bits 
+    Tsector = time to access(read or write) a sector
+    
+    Tsector = ts + 1/(2r) + n/(rN)
+
+7.4) Consider a magnetic disk drive with 8 surfaces, 512 tracks per surface, and 64 sectors 
+per track. Sector size is 1 kB. The average seek time is 8 ms, the track-to-track access time is 1.5 
+ms, and the drive rotates at 3600 rpm. Successive tracks in a cylinder can be read without head 
+movement.
+
+    a) What is the disk capacity?
+        8 * 512 * 64 * 1kb = 256 mb
+    
+    b) What is the average access time? Assume this file is stored in successive sectors and tracks of  
+       successive cylinders, starting at sector 0, track 0, of cylinder i.
+
+        Average Seek = 8ms
+        Rotational Speed = 3600 rpm
+        Sectors = 64
+
+        Rotational Latancy = 1/2 * 1/60 = 8.3ms
+
+        Transfer Time per sector= 3600rpm * 1kb / 64 * 65536 = 3,686,400/4,194,304 bytes per second = 0.87890625 bytes per second = 1136.36ms
+
+        Average Access time = 8ms + 8.333ms + 1136.36ms = 1152.693ms
+
+    c) Estimate the time required to transfer a 5-MB file.
+
+        5Mb = 5 * 1024 * 1024 bytes = 5,242,880 bytes
+
+        5,242,880/ 0.87890625 bytes per second = 5,959,536.64second = 1655.43 hours 
+
+    d) What is the burst transfer rate?
+
+        Burst rate = 60 * 64 * 65,536 = 240mb/s
+
+
+7.5) Consider a single-platter disk with the following parameters: rotation speed: 7200 
+rpm; number of tracks on one side of platter: 30,000; number of sectors per track: 600; seek time: 
+one ms for every hundred tracks traversed. Let the disk receive a request to access a random 
+sector on a random track and assume the disk head starts at track 0.
+
+    a) What is the average seek time?
+
+        seek time = 1revolution/120 rps + 30,000/100 * 1ms 
+                  = 0.0083sec + 300ms 
+                  = 0.3083 seconds 
+    
+    b) What is the average rotational latency?
+
+        Rotational latency = 1/2 * 1/120
+                           = 1/240 seconds = 4.166ms
+
+    c)  What is the transfer time for a sector? !!!what is the size of the sector!!!
+
