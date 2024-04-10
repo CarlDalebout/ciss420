@@ -31,12 +31,14 @@ int main()
   while(!fileRead.eof())
   {
     std::getline(fileRead, user_input);
-    void fetch();
 
-    std::cout << user_input << std::endl;
-    
-    PC++;
-    AR++;
+    cpu.fetch();
+    uint8_t opCode = std::stoi(user_input, nullptr, 16);
+    cpu.do_instruction(opCode, fileRead);
+    cpu.execution();
+
+    if(cpu.pc() == -1)
+      break;
   }
 
   return 0;

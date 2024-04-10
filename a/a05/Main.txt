@@ -61,8 +61,70 @@ sector on a random track and assume the disk head starts at track 0.
     
     b) What is the average rotational latency?
 
-        Rotational latency = 1/2 * 1/120
+        Rotational latency = 1/2 * 1/7200 rpm * 1/60
                            = 1/240 seconds = 4.166ms
 
     c)  What is the transfer time for a sector? !!!what is the size of the sector!!!
 
+        tT = 1 sector / ( 7200rps / 60sec * 600 sectors ) = 0.013888ms
+
+    d) What is the total average time to satisfy a request?
+
+        tb = 308.3 + 4.166ms + 0.013888ms 
+           = 312.479888ms
+
+7.9) Consider a 4-drive, 200 GB-per-drive RAID array. What is the available data storage 
+capacity for each of the RAID levels 0, 1, 3, 4, 5, and 6?
+
+    Raid lvl 0) 
+        there is no redundants so all 4 drives will be using all 200gb totaling to 
+        200gb * 4 = 800gb available
+
+    Raid lvl 1) 
+        each drive will be using double the storage so each drive will have only 100gb available so
+        100gb * 4 = 400gb available
+
+    Raid lvl 2)
+        per m being proportional to log(N) there is one disked used up for redundants so 
+        200gb * 3 = 600gb available
+
+    Raid lvl 3) 
+        one drive will be used for redundants so 
+        200gb * 3 = 600gb available
+
+    Raid lvl 4)
+        same as Raid 4 
+        200gb * 3 = 600gb available
+
+    Raid lvl 5) 
+        same as Raid 4 and 3 but striped over drives
+        200gb * 3 = 600gb
+
+    Raid lvl 6) 
+        Similar striping as raid 5 but there are copies so it uses 2 drives total
+        200gb * 2 = 400gb
+
+7.11) Design a backup strategy for a computer system. One option is to use plug-in external 
+disks, which cost $150 for each 500 GB drive. Another option is to buy a tape drive for $2500, 
+and 400 GB tapes for $50 apiece. (These were realistic prices in 2008.) A typical backup strategy 
+is to have two sets of backup media onsite, with backups alternately written on them so in case 
+the system fails while making a backup, the previous version is still intact. There’s also a third set 
+kept offsite, with the offsite set periodically swapped with an on-site set. 
+
+    a) Assume you have 1 TB (1000 GB) of data to back up. How much would a disk backup system cost?
+        if your doing a Raid lvl 1 then it would cost $300 for two 500gb drives
+
+    b) How much would a tape backup system cost for 1 TB? 
+        starting with the tape drive and 3 400gb taps for a RAID lvl 1 the total will be 
+        2500 + 50 * 3 = $2650
+         
+    c) How large would each backup have to be in order for a tape strategy to be less expensive? 
+         150x = 50x + 2500  
+         x = 25
+         25 * 400gb(per tape) = 10,000gb 
+         = 10tb
+
+    d) What kind of backup strategy favors tapes?
+         RAID lvl 3 because it uses the least number of tapes to store the most amount of data along with 
+         having parallel access.
+    

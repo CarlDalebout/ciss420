@@ -1,5 +1,6 @@
 Enter the name of the file containing the program: test7.txt
 The test7.txt opened properly
+
 fetch 1: AR = 0  and PC = 0
 fetch 2: DR = 11 and PC = 1
 fetch 3: IR = 11 and AR = 1
