@@ -37,7 +37,7 @@ int main()
     cpu.do_instruction(opCode, fileRead);
     cpu.execution();
 
-    if(cpu.pc() == -1)
+    if(cpu.done() == true)
       break;
   }
 
