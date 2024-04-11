@@ -4,6 +4,7 @@ void CPU::fetch()
 {
   AR_ = PC_;
   std::cout << "fetch 1: AR = " << AR_ << " and PC = " << PC_ << '\n'; 
+  
   //DR_ = 
   PC_++;
   std::cout << "fetch 2: AR = " << DR_ << " and PC = " << PC_ << '\n'; 

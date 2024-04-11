@@ -46,6 +46,7 @@ private:
   uint8_t   AC_;
   uint8_t    R_;
   uint8_t Flag_; /* NVCZ */
+  
 };
 
 #endif
